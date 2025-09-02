@@ -9,7 +9,7 @@ class Routes{
       case RouteNames.homeScreen:
         return MaterialPageRoute(builder: (context)=> const HomeScreen());
       case RouteNames.screenOne:
-        return MaterialPageRoute(builder: (context)=> const ScreenOne());
+        return MaterialPageRoute(builder: (context)=>  ScreenOne(data: settings.arguments as Map,));
       case RouteNames.screenTwo:
         return MaterialPageRoute(builder: (context)=> const ScreenTwo());
       default:

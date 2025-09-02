@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:routing/screen_two.dart';
 import 'package:routing/utils/route_names.dart';
 class ScreenOne extends StatefulWidget {
-  const ScreenOne({super.key});
+  dynamic data;
+   ScreenOne({super.key, required this.data});
 
   @override
   State<ScreenOne> createState() => _ScreenOneState();
@@ -13,10 +14,10 @@ class _ScreenOneState extends State<ScreenOne> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-            child: Text(
-              'Screen One ',
-              style: TextStyle(color: Colors.white),
+        title: Center(
+            child:  Text(
+              widget.data['Flutter'],
+              style: const TextStyle(color: Colors.white),
             )),
         backgroundColor: Colors.deepOrange,
       ),
